@@ -1,0 +1,42 @@
+.header {
+    height: 50px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: chartreuse;
+}
+
+.mobile__btn {
+    display: none;
+}
+
+.header__navItems {
+    height: 100%;
+    width: 100%;
+    max-width: 750px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: cornflowerblue;
+    margin: 0;
+    text-align: center;
+    padding: 0 20px !important;
+}
+.header__navItems > li {
+    list-style-type: none;
+}
+.header__navItems > li > a {
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+}
+.header__navItems > li > a:hover {
+    color: rgb(200, 129, 209);
+    transition: 0.2s;
+}
+.header__navItems > li > a:focus {
+    color: chocolate;
+}
