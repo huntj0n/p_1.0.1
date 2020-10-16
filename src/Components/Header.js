@@ -5,10 +5,8 @@ import './Header.css';
 function Header() {
     return (
         <header className="header">
-            <nav className="header__nav">
-                <a className="mobile__btn" href="#header" title="Show Navigation">Show Navigation</a>
-                <a className="mobile__btn" href="#header__nav" title="Hide Navigation">Hide Navigation</a>
-            </nav>
+            <input className='mobile__btn' id='mobile__toggle' type="checkbox"/>
+            <label htmlFor="mobile__toggle"></label>
 
             <ul className="header__navItems">
                 <li><a className="smoothscroll" href="#home">Home</a></li>

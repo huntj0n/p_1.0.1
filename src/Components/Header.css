@@ -1,3 +1,7 @@
+:root{
+    --animation__curve: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
 .header {
     height: 40px;
     width: 100vw;
@@ -11,9 +15,6 @@
 
 .mobile__btn {
     display: none;
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
 }
 
 .header__navItems {
@@ -45,20 +46,60 @@
     color: #db504a;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 850px) {
     .header__navItems{
         width: 500px;
         font-size: smaller;
         justify-content: space-evenly;
     }
 }
-@media (max-width: 400px) {
-    .mobile__btn {
+@media (max-width: 500px) {
+    .header {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
     }
+    .header > label {
+        width: 1.3em;
+        height: 0.1em;
+        background-color: #f4f4f4;
+        margin-left: 15px;
+        position: absolute;
+        cursor: pointer;
+    }
+    .header > label::before, label::after{
+        content: '';
+        width: 1.3em;
+        height: 0.1em;
+        background-color: #f4f4f4;
+        position: absolute;
+        display: block;
+        transition: all 0.4s var(--animation__curve);
+    }
+    .header > label::before {
+        top: -6px;
+        left: 0px;
+        transform-origin: left top;
+        transform: rotatez(0deg);
+    }
+    .header > label::after {
+        top: 6px;
+        left: 0px;
+        transform-origin: left bottom;
+        transform: rotatez(0deg);
+    }
+
     .header__navItems {
         display: none;
+    }
+
+    .mobile__btn:checked ~ label {
+        background-color: transparent;
+    }
+    .mobile__btn:checked ~ label::before{
+        transform: rotatez(41deg);
+    } 
+    .mobile__btn:checked ~ label::after{
+        transform: rotatez(-41deg);
     }
 }
