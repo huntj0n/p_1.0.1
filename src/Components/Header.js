@@ -1,10 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.css';
 
 
 function Header() {
+
+    const [navbar, setNavbar] = useState(false)
+
+    const changeNavBackground = () => {
+        if ( window.scrollY >= 400) {
+            setNavbar(true)
+        } else {
+            setNavbar(false)
+        }
+    }
+
+    window.addEventListener('scroll', changeNavBackground)
+
     return (
-        <header className="header">
+        <header className={navbar ? 'navbar active': 'navbar'}>
             <input className='mobile__btn' id='mobile__toggle' type="checkbox"/>
             <label htmlFor="mobile__toggle"></label>
 
