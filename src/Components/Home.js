@@ -3,7 +3,7 @@ import './Home.css';
 
 function Home() {
     return (
-        <div className="home">
+        <div className="home" id="scrollHome">
             Im Jon Hunt
         </div>
     )

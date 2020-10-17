@@ -41,18 +41,22 @@ header {
 .header__navItems > li {
     list-style-type: none;
 }
-.header__navItems > li > a {
+
+.navLink {
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
     color: white;
 }
-.header__navItems > li > a:hover {
+.navLink:hover {
     color: #d37462;
     transition: 0.2s;
 }
-.header__navItems > li > a:focus {
+.navLink:focus {
     color: #db504a;
+}
+.header__navItems > .focus {
+    color:#db504a
 }
 
 @media (max-width: 850px) {

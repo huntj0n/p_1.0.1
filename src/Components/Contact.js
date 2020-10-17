@@ -3,7 +3,7 @@ import './Contact.css';
 
 function Contact() {
     return (
-        <div className="contact">
+        <div className="contact" id='scrollContact'>
             Email me here
         </div>
     )
