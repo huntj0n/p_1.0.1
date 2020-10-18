@@ -1,17 +1,63 @@
-.dropdown  {
+.dropdown {
     display: none;
-    position: absolute;
-    width: 100vw;
-    top: 40px;
-    transition: 0.2s;
 }
-.dropdown .navLink {
-    margin: 10px auto;
+.navLink {
+    cursor: pointer;
 }
 
-@media (max-width: 500px) {
-    .dropdown{
+@media (max-width: 500px){
+    .dropdown {
         display: flex;
         flex-direction: column;
+        position: absolute;
+    }
+    .dropdown > label {
+        width: 1.3em;
+        height: 0.1em;
+        background-color: #f4f4f4;
+        margin-left: 15px;
+        position: absolute;
+        cursor: pointer;
+    }
+    .dropdown > label::before, label::after{
+        content: '';
+        width: 1.3em;
+        height: 0.1em;
+        background-color: #f4f4f4;
+        position: absolute;
+        display: block;
+        transition: all 0.4s var(--animation__curve);
+    }
+    .dropdown > label::before {
+        top: -6px;
+        left: 0px;
+        transform-origin: left top;
+        transform: rotatez(0deg);
+    }
+    .dropdown > label::after {
+        top: 6px;
+        left: 0px;
+        transform-origin: left bottom;
+        transform: rotatez(0deg);
+    }
+    
+    .mobile__btn:checked ~ label {
+        background-color: transparent;
+    }
+    .mobile__btn:checked ~ label::before{
+        transform: rotatez(41deg);
+    } 
+    .mobile__btn:checked ~ label::after{
+        transform: rotatez(-41deg);
+    }
+    .menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 40px;
+        width: 100vw;
+    }
+    .menu > .navLink {
+        margin: 10px auto;
     }
 }

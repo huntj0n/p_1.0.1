@@ -8,34 +8,23 @@ import Dropdown from './Dropdown';
 function Nav() {
 
     const [navbar, setNavbar] = useState(false)
-    const [dropdown, setDropdown] = useState(false)
 
     const changeNavBackground = () => {
-        if ( window.scrollY >= 400) {
+        if ( window.scrollY >= 300) {
             setNavbar(true)
         } else {
             setNavbar(false)
         }
     }
 
+    const width = window.innerWidth;
+
     window.addEventListener('scroll', changeNavBackground)
-
-    // const styles = {
-    //     textDecoration: 'none',
-    //     textTransform: 'uppercase',
-    //     transition: '0.2s',
-    //     color: '#f4f4f4',
-        
-    // }
-
 
     return (
         <nav className={navbar ? 'navbar active': 'navbar'}>
-            <input className='mobile__btn' id='mobile__toggle' type="checkbox" onClick={()=>{setDropdown(!dropdown)}}/>
-            <label htmlFor="mobile__toggle"></label>
-
-
-            {dropdown ? <Dropdown/> : null}
+            
+            {width > 500 ? null : <Dropdown />}
 
             <ul className="header__navItems">
                 <Link 
@@ -46,7 +35,6 @@ function Nav() {
                     duration={1000} 
                     delay={100} 
                     spy={true}
-                    // style={styles} 
                 >
                     Home
                 </Link>
@@ -59,7 +47,6 @@ function Nav() {
                     delay={100} 
                     activeClass='activeLink'
                     spy={true}
-                    // style={styles} 
                 >
                     About
                 </Link>
@@ -72,7 +59,6 @@ function Nav() {
                     delay={100} 
                     activeClass='activeLink'
                     spy={true}
-                    // style={styles} 
                 >
                     Resume
                 </Link>
@@ -85,7 +71,6 @@ function Nav() {
                     delay={100} 
                     activeClass='activeLink'
                     spy={true}
-                    // style={styles} 
                 >
                     Portfolio
                 </Link>
@@ -98,7 +83,6 @@ function Nav() {
                     delay={100} 
                     activeClass='activeLink'
                     spy={true}
-                    // style={styles} 
                 >
                     Contact
                 </Link>

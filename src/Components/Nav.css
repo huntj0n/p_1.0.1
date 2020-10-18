@@ -73,47 +73,7 @@ nav {
         align-items: flex-start;
         justify-content: center;
     }
-    nav > label {
-        width: 1.3em;
-        height: 0.1em;
-        background-color: #f4f4f4;
-        margin-left: 15px;
-        position: absolute;
-        cursor: pointer;
-    }
-    nav > label::before, label::after{
-        content: '';
-        width: 1.3em;
-        height: 0.1em;
-        background-color: #f4f4f4;
-        position: absolute;
-        display: block;
-        transition: all 0.4s var(--animation__curve);
-    }
-    nav > label::before {
-        top: -6px;
-        left: 0px;
-        transform-origin: left top;
-        transform: rotatez(0deg);
-    }
-    nav > label::after {
-        top: 6px;
-        left: 0px;
-        transform-origin: left bottom;
-        transform: rotatez(0deg);
-    }
-
     .header__navItems {
         display: none;
-    }
-
-    .mobile__btn:checked ~ label {
-        background-color: transparent;
-    }
-    .mobile__btn:checked ~ label::before{
-        transform: rotatez(41deg);
-    } 
-    .mobile__btn:checked ~ label::after{
-        transform: rotatez(-41deg);
     }
 }
