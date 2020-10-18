@@ -3,6 +3,7 @@
     position: absolute;
     width: 100vw;
     top: 40px;
+    transition: 0.2s;
 }
 .dropdown .navLink {
     margin: 10px auto;
