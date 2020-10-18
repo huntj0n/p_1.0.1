@@ -15,7 +15,12 @@
     font-size: 3rem;
 }
 
-.social .MuiSvgIcon-root{
+.social  a  .MuiSvgIcon-root{
     margin: 0 20px;
     font-size: 2rem;
+    color: #f4f4f4;
+    transition: 0.2s;
+}
+.social  a  .MuiSvgIcon-root:hover {
+    filter: brightness(1.7);
 }

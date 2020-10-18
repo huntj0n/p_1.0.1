@@ -68,12 +68,12 @@ nav {
     }
 }
 @media (max-width: 500px) {
-    header {
+    nav {
         display: flex;
         align-items: flex-start;
         justify-content: center;
     }
-    header > label {
+    nav > label {
         width: 1.3em;
         height: 0.1em;
         background-color: #f4f4f4;
@@ -81,7 +81,7 @@ nav {
         position: absolute;
         cursor: pointer;
     }
-    header > label::before, label::after{
+    nav > label::before, label::after{
         content: '';
         width: 1.3em;
         height: 0.1em;
@@ -90,13 +90,13 @@ nav {
         display: block;
         transition: all 0.4s var(--animation__curve);
     }
-    header > label::before {
+    nav > label::before {
         top: -6px;
         left: 0px;
         transform-origin: left top;
         transform: rotatez(0deg);
     }
-    header > label::after {
+    nav > label::after {
         top: 6px;
         left: 0px;
         transform-origin: left bottom;

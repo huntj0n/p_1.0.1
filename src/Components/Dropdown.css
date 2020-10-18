@@ -1,0 +1,16 @@
+.dropdown  {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    top: 40px;
+}
+.dropdown .navLink {
+    margin: 10px auto;
+}
+
+@media (max-width: 500px) {
+    .dropdown{
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -14,11 +14,11 @@ function Home() {
                 <p>Full Stack Developer by Day. I am like a big fan of stuff.</p>
             </div>
             <div className="social">
-                <LinkedInIcon/>
-                <GitHubIcon/>
+                <a href="https://www.linkedin.com/in/jon-hunt-89a1b61b4/"><LinkedInIcon/></a>
+                <a href="https://github.com/huntj0n"><GitHubIcon/></a>
             </div>
         </div>
-    )
+    ) 
 }
 
 export default Home
