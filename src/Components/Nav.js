@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import './Header.css';
+import './Nav.css';
 
 import { Link } from 'react-scroll';
 
-function Header() {
+function Nav() {
 
     const [navbar, setNavbar] = useState(false)
 
@@ -17,9 +17,17 @@ function Header() {
 
     window.addEventListener('scroll', changeNavBackground)
 
+    // const styles = {
+    //     textDecoration: 'none',
+    //     textTransform: 'uppercase',
+    //     transition: '0.2s',
+    //     color: '#f4f4f4',
+        
+    // }
+
 
     return (
-        <header className={navbar ? 'navbar active': 'navbar'}>
+        <nav className={navbar ? 'navbar active': 'navbar'}>
             <input className='mobile__btn' id='mobile__toggle' type="checkbox"/>
             <label htmlFor="mobile__toggle"></label>
 
@@ -33,11 +41,11 @@ function Header() {
                 <Link 
                     to='scrollHome'
                     className='navLink'
-                    activeClass='active'
+                    activeClass='activeLink'
                     smooth={true} 
                     duration={1000} 
                     delay={100} 
-                    // spy={true}
+                    spy={true}
                     // style={styles} 
                 >
                     Home
@@ -49,8 +57,8 @@ function Header() {
                     smooth={true} 
                     duration={1000} 
                     delay={100} 
-                    activeClass='active'
-                    // spy={true}
+                    activeClass='activeLink'
+                    spy={true}
                     // style={styles} 
                 >
                     About
@@ -62,8 +70,8 @@ function Header() {
                     smooth={true} 
                     duration={1000} 
                     delay={100} 
-                    activeClass='active'
-                    // spy={true}
+                    activeClass='activeLink'
+                    spy={true}
                     // style={styles} 
                 >
                     Resume
@@ -75,8 +83,8 @@ function Header() {
                     smooth={true} 
                     duration={1000} 
                     delay={100} 
-                    activeClass='active'
-                    // spy={true}
+                    activeClass='activeLink'
+                    spy={true}
                     // style={styles} 
                 >
                     Portfolio
@@ -88,15 +96,15 @@ function Header() {
                     smooth={true} 
                     duration={1000} 
                     delay={100} 
-                    activeClass='active'
-                    // spy={true}
+                    activeClass='activeLink'
+                    spy={true}
                     // style={styles} 
                 >
                     Contact
                 </Link>
             </ul>
-        </header>
+        </nav>
     )
 }
 
-export default Header
+export default Nav
