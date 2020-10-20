@@ -2,17 +2,23 @@ import React, { useState } from 'react';
 import './Dropdown.css';
 import { Link } from 'react-scroll';
 
+
 function Dropdown() {
 
     const [dropdown, setDropdown] = useState(false)
+    const [checked, setChecked] = useState(false)
 
-    
 
     return (
         <nav className='dropdown'>
 
-        <input className='mobile__btn' id='mobile__toggle' type="checkbox" onClick={()=>{setDropdown(!dropdown)}}/>
-        <label htmlFor="mobile__toggle"></label>
+        <div className="krabbypatty"
+            onClick={ () => {setDropdown(!dropdown)} }
+        >
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
 
         {dropdown ? 
         (
@@ -24,7 +30,7 @@ function Dropdown() {
                     smooth={true} 
                     duration={1000} 
                     delay={100}
-                    onClick={() => {setDropdown(!dropdown)}} 
+                    onClick={() => {setChecked(!checked)}} 
                 >
                     Home
                 </Link>
@@ -35,7 +41,7 @@ function Dropdown() {
                     smooth={true} 
                     duration={1000} 
                     delay={100}
-                    onClick={() => {setDropdown(!dropdown)}}  
+                    onClick={() => {setChecked(!checked)}}  
                 >
                     About
                 </Link>
@@ -46,7 +52,7 @@ function Dropdown() {
                     smooth={true} 
                     duration={1000} 
                     delay={100}
-                    onClick={() => {setDropdown(!dropdown)}}  
+                    onClick={() => {setChecked(!checked)}}  
                 >
                     Resume
                 </Link>
@@ -57,7 +63,7 @@ function Dropdown() {
                     smooth={true} 
                     duration={1000} 
                     delay={100}
-                    onClick={() => {setDropdown(!dropdown)}}  
+                    onClick={() => {setChecked(!checked)}}  
                 >
                     Portfolio
                 </Link>
@@ -68,7 +74,7 @@ function Dropdown() {
                     smooth={true} 
                     duration={1000} 
                     delay={100}
-                    onClick={() => {setDropdown(!dropdown)}}  
+                    onClick={() => {setChecked(!checked)}}  
                 >
                     Contact
                 </Link>

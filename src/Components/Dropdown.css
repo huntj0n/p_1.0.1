@@ -50,6 +50,28 @@
     .mobile__btn:checked ~ label::after{
         transform: rotatez(-41deg);
     }
+
+    .krabbypatty {
+        height: 1.3rem;
+        width: 2rem;
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .krabbypatty > div {
+        width: 1.3em;
+        height: 0.1em;
+        background-color: #f4f4f4;
+        display: block;
+    }
+    
+
+
+
     .menu {
         display: flex;
         flex-direction: column;
@@ -59,5 +81,9 @@
     }
     .menu > .navLink {
         margin: 10px auto;
+        /* padding: 0.5rem 0.1rem; */
     }
+    /* .menu > .navLink:not(:nth-last-child(1)){
+        border-bottom: 1px solid #f4f4f4;
+    } */
 }
