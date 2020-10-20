@@ -21,16 +21,16 @@ const Krabbypatty = styled.div`
         background-color: #f4f4f4;
         display: block;
         transform-origin: 1px;
-        transition: all 0.4s var(--animation__curve);
+        transition: all 0.5s var(--animation__curve);
 
         &:nth-child(1){
-            transform: ${({ dropdown }) => dropdown ? 'rotate(45deg)' : 'rotate(0deg)'};
+            transform: ${({ dropdown }) => dropdown ? 'rotatez(45deg)' : 'rotate(0deg)'};
         }
         &:nth-child(2){
             background-color: ${({ dropdown }) => dropdown ? 'transparent' : '#f4f4f4'};
         }
         &:nth-child(3){
-            transform: ${({ dropdown }) => dropdown ? 'rotate(-45deg)' : 'rotate(0deg)'};
+            transform: ${({ dropdown }) => dropdown ? 'rotatez(-45deg)' : 'rotate(0deg)'};
         }
     }
 `
@@ -39,8 +39,6 @@ const Krabbypatty = styled.div`
 function Dropdown() {
 
     const [dropdown, setDropdown] = useState(false)
-    const [checked, setChecked] = useState(false)
-
 
     return (
         <nav className='dropdown'>
