@@ -56,10 +56,11 @@
         width: 2rem;
         position: absolute;
         left: 15px;
-        top: 15px;
+        top: 10px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        transition: all 0.4s var(--animation__curve);
     }
 
     .krabbypatty > div {

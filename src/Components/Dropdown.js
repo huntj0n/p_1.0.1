@@ -1,6 +1,39 @@
 import React, { useState } from 'react';
 import './Dropdown.css';
 import { Link } from 'react-scroll';
+import styled from 'styled-components';
+
+const Krabbypatty = styled.div`
+   
+    height: 1.3rem;
+    width: 2rem;
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+
+    div {
+        width: 1.3em;
+        height: 0.1em;
+        background-color: #f4f4f4;
+        display: block;
+        transform-origin: 1px;
+        transition: all 0.4s var(--animation__curve);
+
+        &:nth-child(1){
+            transform: ${({ dropdown }) => dropdown ? 'rotate(45deg)' : 'rotate(0deg)'};
+        }
+        &:nth-child(2){
+            background-color: ${({ dropdown }) => dropdown ? 'transparent' : '#f4f4f4'};
+        }
+        &:nth-child(3){
+            transform: ${({ dropdown }) => dropdown ? 'rotate(-45deg)' : 'rotate(0deg)'};
+        }
+    }
+`
 
 
 function Dropdown() {
@@ -12,13 +45,15 @@ function Dropdown() {
     return (
         <nav className='dropdown'>
 
-        <div className="krabbypatty"
+        <Krabbypatty 
+            className="krabbypatty"
+            dropdown={dropdown}
             onClick={ () => {setDropdown(!dropdown)} }
         >
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+            <div/>
+            <div/>
+            <div/>
+        </Krabbypatty>
 
         {dropdown ? 
         (
@@ -30,7 +65,7 @@ function Dropdown() {
                     smooth={true} 
                     duration={1000} 
                     delay={100}
-                    onClick={() => {setChecked(!checked)}} 
+                    onClick={ () => {setDropdown(!dropdown)} } 
                 >
                     Home
                 </Link>
@@ -41,7 +76,7 @@ function Dropdown() {
                     smooth={true} 
                     duration={1000} 
                     delay={100}
-                    onClick={() => {setChecked(!checked)}}  
+                    onClick={ () => {setDropdown(!dropdown)} }  
                 >
                     About
                 </Link>
@@ -52,7 +87,7 @@ function Dropdown() {
                     smooth={true} 
                     duration={1000} 
                     delay={100}
-                    onClick={() => {setChecked(!checked)}}  
+                    onClick={ () => {setDropdown(!dropdown)} }  
                 >
                     Resume
                 </Link>
@@ -63,7 +98,7 @@ function Dropdown() {
                     smooth={true} 
                     duration={1000} 
                     delay={100}
-                    onClick={() => {setChecked(!checked)}}  
+                    onClick={ () => {setDropdown(!dropdown)} }  
                 >
                     Portfolio
                 </Link>
@@ -74,7 +109,7 @@ function Dropdown() {
                     smooth={true} 
                     duration={1000} 
                     delay={100}
-                    onClick={() => {setChecked(!checked)}}  
+                    onClick={ () => {setDropdown(!dropdown)} }  
                 >
                     Contact
                 </Link>
