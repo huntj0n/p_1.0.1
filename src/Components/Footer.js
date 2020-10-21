@@ -4,7 +4,8 @@ import './Footer.css';
 function Footer() {
     return (
         <div className="footer">
-            This right here is the footer of this here page
+            <div className="footer__copyright">Copyright © {new Date().getFullYear()}, Jon Hunt</div>
+
         </div>
     )
 }
