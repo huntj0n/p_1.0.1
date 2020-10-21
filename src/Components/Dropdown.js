@@ -3,6 +3,8 @@ import './Dropdown.css';
 import { Link } from 'react-scroll';
 import styled from 'styled-components';
 
+import Backdrop from './Backdrop';
+
 const Krabbypatty = styled.div`
    
     height: 1.3rem;
@@ -14,6 +16,7 @@ const Krabbypatty = styled.div`
     flex-direction: column;
     justify-content: space-around;
     cursor: pointer;
+    z-index: 200;
 
     div {
         width: 1.3em;
@@ -41,7 +44,7 @@ function Dropdown() {
     const [dropdown, setDropdown] = useState(false)
 
     return (
-        <nav className='dropdown'>
+        <nav className={dropdown ? 'dropdown active': 'dropdown'}>
 
         <Krabbypatty 
             className="krabbypatty"
@@ -53,8 +56,10 @@ function Dropdown() {
             <div/>
         </Krabbypatty>
 
+
         {dropdown ? 
         (
+            <>
             <div className="menu">
                 <Link 
                     to='scrollHome'
@@ -66,6 +71,17 @@ function Dropdown() {
                     onClick={ () => {setDropdown(!dropdown)} } 
                 >
                     Home
+                </Link>
+
+                <Link 
+                    to='scrollPortfolio' 
+                    className='navLink' 
+                    smooth={true} 
+                    duration={1000} 
+                    delay={100}
+                    onClick={ () => {setDropdown(!dropdown)} }  
+                >
+                    Portfolio
                 </Link>
 
                 <Link 
@@ -89,17 +105,6 @@ function Dropdown() {
                 >
                     Resume
                 </Link>
-
-                <Link 
-                    to='scrollPortfolio' 
-                    className='navLink' 
-                    smooth={true} 
-                    duration={1000} 
-                    delay={100}
-                    onClick={ () => {setDropdown(!dropdown)} }  
-                >
-                    Portfolio
-                </Link>
                 
                 <Link 
                     to='scrollContact' 
@@ -112,6 +117,8 @@ function Dropdown() {
                     Contact
                 </Link>
             </div>
+            <Backdrop click={ () => {setDropdown(!dropdown)}}/>
+            </>
         ):(
             null
         )}

@@ -10,7 +10,7 @@ function Nav() {
     const [navbar, setNavbar] = useState(false)
 
     const changeNavBackground = () => {
-        if ( window.scrollY >= 300) {
+        if ( window.scrollY >= 100) {
             setNavbar(true)
         } else {
             setNavbar(false)
@@ -40,6 +40,18 @@ function Nav() {
                 </Link>
 
                 <Link 
+                    to='scrollPortfolio' 
+                    className='navLink' 
+                    smooth={true} 
+                    duration={1000} 
+                    delay={100} 
+                    activeClass='activeLink'
+                    spy={true}
+                >
+                    Portfolio
+                </Link>
+
+                <Link 
                     to='scrollAbout' 
                     className='navLink' 
                     smooth={true} 
@@ -61,18 +73,6 @@ function Nav() {
                     spy={true}
                 >
                     Resume
-                </Link>
-
-                <Link 
-                    to='scrollPortfolio' 
-                    className='navLink' 
-                    smooth={true} 
-                    duration={1000} 
-                    delay={100} 
-                    activeClass='activeLink'
-                    spy={true}
-                >
-                    Portfolio
                 </Link>
                 
                 <Link 

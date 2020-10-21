@@ -10,7 +10,8 @@ nav {
     align-items: center;
     justify-content: space-between;
     position: fixed;
-    transition: 0.3s;
+    transition: 0.5s;
+    z-index: 200;
 }
 
 .navbar {
@@ -20,6 +21,7 @@ nav {
 .active {
     background-color: #424348;
     position: fixed;
+    z-index: 200;
 }
 
 .mobile__btn {
