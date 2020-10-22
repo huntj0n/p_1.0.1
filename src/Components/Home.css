@@ -13,6 +13,7 @@
 
 .title h1 {
     font-size: 3rem;
+    text-shadow: 1px 0 0 rgba(0,0,0,0.5);
 }
 
 .social  a  .MuiSvgIcon-root{
@@ -25,3 +26,30 @@
     filter: brightness(1.9);
     transform: scale(1.1);
 }
+
+.action {
+    margin-top: 5rem;
+}
+.action button {
+    outline: none;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 999px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.action button:hover {
+    background-color: white;
+    color: #db504a;
+    border: 1px solid #db504a;
+}
+
+/* #db504a
+
+#d37462
+
+#424348 */

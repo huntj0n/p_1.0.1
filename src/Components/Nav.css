@@ -21,7 +21,6 @@ nav {
 .active {
     background-color: #424348;
     position: fixed;
-    z-index: 200;
 }
 
 .mobile__btn {

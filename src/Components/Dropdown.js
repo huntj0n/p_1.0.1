@@ -60,7 +60,7 @@ function Dropdown() {
         {dropdown ? 
         (
             <>
-            <div className="menu">
+            <div className={dropdown ? 'menu open' : 'menu'}>
                 <Link 
                     to='scrollHome'
                     className='navLink'
