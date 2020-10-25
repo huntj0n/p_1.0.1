@@ -18,7 +18,7 @@ function Home() {
     useEffect(() => {
         tl.to(homeContainer, 0, {css: { visibility: 'visible' }})
         .to(imageReveal, 1.4, { width: '0%', ease: Power2.easeInOut })
-        .from(image, 1.4, {scale: '1.4', ease: Power2.easeInOut, delay: -1.6})
+        .from(image, 1.4, { scale: '1.4', ease: Power2.easeInOut, delay: -1.6})
     })
 
     return (
