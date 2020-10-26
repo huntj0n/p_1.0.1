@@ -26,7 +26,7 @@ function Home() {
             <div className="home__container" ref={el => homeContainer = el}>
                 <> 
                     <div className="home__imageContainer">
-                        <img src={require('../img/roi-dimor-SidputyP-eE-unsplash.jpg')} alt="home__image" ref={el => image = el}/>
+                        <div src={require('../img/roi-dimor-SidputyP-eE-unsplash.jpg')} alt="home__image" ref={el => image = el}/>
                     </div>
                 </>
             </div>

@@ -26,6 +26,8 @@
     align-items: center;
     position: relative;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
     background-size: cover;
 }
 .home__imageContainer:after {
@@ -37,10 +39,17 @@
     right: 0;
     background-color: #424348;
 }
-.home__imageContainer > img {
-    min-width:100%;
+.home__imageContainer > div {
+    height:auto;
+    min-height: 100%;
     width:100%;
     position:absolute;
+    background-image: url('../img/roi-dimor-SidputyP-eE-unsplash.jpg');
+    background-size: cover;
+    top:0; 
+    bottom:100%;
+    left:0; 
+    right:100%;
     object-fit: contain;
 }
 
